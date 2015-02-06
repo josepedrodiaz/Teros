@@ -1,5 +1,7 @@
-<?php require_once('Connections/terosgulpoeste.php'); ?>
 <?php
+//testing Github
+require_once('Connections/terosgulpoeste.php'); 
+
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
