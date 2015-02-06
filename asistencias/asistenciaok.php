@@ -1,5 +1,6 @@
 <?php
 //testing Github
+//test 2 github
 require_once('Connections/terosgulpoeste.php'); 
 
 if (!function_exists("GetSQLValueString")) {
