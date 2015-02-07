@@ -1,4 +1,4 @@
-<?php require_once('Connections/terosgulpoeste.php'); ?>
+<?php require_once('../db/db.php'); ?>
 <?php
 $contador1=0;
 
@@ -49,9 +49,9 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 </style>
 </header>
 <?php 
-mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
+mysql_select_db($database_db, $db);
 $query_beneficiarios_list = "SELECT * FROM beneficiarios ORDER BY apellidos ASC";
-$beneficiarios_list = mysql_query($query_beneficiarios_list, $terosgulpoeste) or die(mysql_error());
+$beneficiarios_list = mysql_query($query_beneficiarios_list, $db) or die(mysql_error());
 $row_beneficiarios_list = mysql_fetch_assoc($beneficiarios_list);
 $totalRows_beneficiarios_list = mysql_num_rows($beneficiarios_list);
 ?>

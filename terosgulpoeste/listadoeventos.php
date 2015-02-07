@@ -1,4 +1,4 @@
-<?php require_once('Connections/terosgulpoeste.php'); ?>
+<?php require_once('../db/db.php'); ?>
 <?php
 $contador1=0;
 
@@ -51,9 +51,9 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 </style>
 </header>
 <?php 
-mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
+mysql_select_db($database_db, $db);
 $query_eventos_list = "SELECT * FROM eventos ORDER BY fecha ASC";
-$eventos_list = mysql_query($query_eventos_list, $terosgulpoeste) or die(mysql_error());
+$eventos_list = mysql_query($query_eventos_list, $db) or die(mysql_error());
 $row_eventos_list = mysql_fetch_assoc($eventos_list);
 $totalRows_eventos_list = mysql_num_rows($eventos_list);
 ?>

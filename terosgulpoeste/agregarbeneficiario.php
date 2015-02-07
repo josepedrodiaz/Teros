@@ -1,4 +1,4 @@
-<?php require_once('Connections/terosgulpoeste.php'); ?>
+<?php require_once('../db/db.php'); ?>
 <?php
 $error=0;
 
@@ -51,8 +51,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 						   GetSQLValueString($_POST['apellidos'], "text"),
 						   GetSQLValueString($_POST['dni'], "int"));
 	
-	  mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
-	  $Result1 = mysql_query($insertSQL, $terosgulpoeste) or die(mysql_error());
+	  mysql_select_db($database_db, $db);
+	  $Result1 = mysql_query($insertSQL, $db) or die(mysql_error());
 	
 	  $insertGoTo = "index.php";
 	  if (isset($_SERVER['QUERY_STRING'])) {
@@ -64,11 +64,11 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 }
 
-mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
+mysql_select_db($database_db, $db);
 $query_beneficiarios = "SELECT * FROM beneficiarios ORDER BY apellidos ASC";
-$beneficiarios = mysql_query($query_beneficiarios, $terosgulpoeste) or die(mysql_error());
+$beneficiarios = mysql_query($query_beneficiarios, $db) or die(mysql_error());
 $row_beneficiarios = mysql_fetch_assoc($beneficiarios);
-$totalRows_beneficiarios = mysql_num_rows($beneficiarios);mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
+$totalRows_beneficiarios = mysql_num_rows($beneficiarios);
 
 mysql_free_result($beneficiarios);
 
