@@ -1,5 +1,6 @@
 <?php require_once('../db/db.php'); ?>
 <?php
+//no quiero que me aparezcan
 $contador1=0;
 
 if (!function_exists("GetSQLValueString")) {
