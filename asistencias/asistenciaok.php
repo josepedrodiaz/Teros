@@ -1,5 +1,6 @@
 <?php require_once('../db/db.php'); ?>
 <?php
+//testGH
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
