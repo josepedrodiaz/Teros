@@ -1,11 +1,5 @@
+<?php require_once('../db/db.php'); ?>
 <?php
-//testing Github
-//test 2 github
-
-//NUEVOTEST
-//Prueba branch Test
-require_once('Connections/terosgulpoeste.php'); 
-
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -41,13 +35,14 @@ $colname_mostrar = "-1";
 if (isset($_GET['dni'])) {
   $colname_mostrar = $_GET['dni'];
 }
-mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
+mysql_select_db($database_db, $db);
 $query_mostrar = sprintf("SELECT * FROM beneficiarios WHERE dni = %s", GetSQLValueString($colname_mostrar, "int"));
-$mostrar = mysql_query($query_mostrar, $terosgulpoeste) or die(mysql_error());
+$mostrar = mysql_query($query_mostrar, $db) or die(mysql_error());
 $row_mostrar = mysql_fetch_assoc($mostrar);
 $totalRows_mostrar = mysql_num_rows($mostrar);
 ?>
 <header>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <style type="text/css">
 .estilo1 {
 	text-align: center;
@@ -76,10 +71,7 @@ $totalRows_mostrar = mysql_num_rows($mostrar);
       <p class="letra2"><?php echo $row_mostrar['apellidos']; ?>, <?php echo $row_mostrar['nombres']; ?></p>
       <p><span class="letra1">Gracias</span></p>
       <p>&nbsp;</p>
-      <p><a href="controlarasistencias.php" id="otro">CARGAR OTRA ASISTENCIA</a><br>
-      <script type="text/javascript">
-      document.getElementById("otro").focus();
-      </script>
+      <p><a href="controlarasistencias.php">CARGAR OTRA ASISTENCIA</a><br>
         <br>
     </p></td>
   </tr>

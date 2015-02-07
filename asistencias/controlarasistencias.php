@@ -1,4 +1,4 @@
-<?php require_once('Connections/asistencias.php'); ?>
+<?php require_once('../db/db.php'); ?>
 <?php
 $error=0;
 $id_evento_pred=6;
@@ -59,7 +59,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 							   GetSQLValueString($id_evento_pred, "int"));
 		
 		  //mysql_select_db($database_asistencias, $asistencias) or die(mysql_error());
-		  $Result1 = mysql_query($insertSQL, $asistencias) or die(mysql_error());
+		  $Result1 = mysql_query($insertSQL, $db) or die(mysql_error());
 		  
 		  $insertGoTo = "asistenciaok.php?dni=$_POST[dni]";
 
@@ -69,7 +69,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 //mysql_select_db($database_asistencias, $asistencias);
 $query_asistencias = "SELECT * FROM asistencia";
-$asistencias = mysql_query($query_asistencias, $asistencias) or die(mysql_error());
+$asistencias = mysql_query($query_asistencias, $db) or die(mysql_error());
 $row_asistencias = mysql_fetch_assoc($asistencias);
 $totalRows_asistencias = mysql_num_rows($asistencias);
 

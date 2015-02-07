@@ -1,4 +1,4 @@
-<?php require_once('Connections/terosgulpoeste.php'); ?>
+<?php require_once('../db/db.php'); ?>
 <?php
 
 if (!function_exists("GetSQLValueString")) {
@@ -42,8 +42,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
                        GetSQLValueString($_POST['nombre'], "text"),
                        GetSQLValueString($_POST['fecha'], "date"));
 
-  mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
-  $Result1 = mysql_query($insertSQL, $terosgulpoeste) or die(mysql_error());
+  mysql_select_db($database_db, $db);
+  $Result1 = mysql_query($insertSQL, $db) or die(mysql_error());
 
   $insertGoTo = "index.php";
   if (isset($_SERVER['QUERY_STRING'])) {
@@ -53,9 +53,9 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   header(sprintf("Location: %s", $insertGoTo));
 }
 
-mysql_select_db($database_terosgulpoeste, $terosgulpoeste);
+mysql_select_db($database_db, $db);
 $query_crearevento = "SELECT * FROM eventos ORDER BY fecha ASC";
-$crearevento = mysql_query($query_crearevento, $terosgulpoeste) or die(mysql_error());
+$crearevento = mysql_query($query_crearevento, $db) or die(mysql_error());
 $row_crearevento = mysql_fetch_assoc($crearevento);
 $totalRows_crearevento = mysql_num_rows($crearevento);
 ?>
