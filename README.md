@@ -3,7 +3,7 @@ Este repositorio abarca el código generado para ayudar
 a la gestión online del grupo de beneficiarios Pro.Cre.Ar, el Gigante del Oeste.
 
 Contribuyen a este Código:
- - Lucas
+ - Lucas Yurkiw
  - Pedro Díaz
  
  ## Funcionalidades
