@@ -143,7 +143,7 @@
 	}
 	#calle52{
 		position: absolute;	
-		left: 580px;
+		left: 355px;
 		top: 705px;
 	}
 	#calle177{
@@ -182,9 +182,9 @@
 
 <body>
 <h1 id="calle47">Calle 47</h1>
-<h1 id="calle52">Calle 52</h1>
+<h1 id="calle52">Ampliación Av. 52 (a ceder)</h1>
 <h1 id="calle177">Calle 177</h1>
-<h1 id="calle173">Calle 173</h1>
+<h1 id="calle173">Av. 173</h1>
 <div id="page">
 <?php
 require_once('../db/db.php');
@@ -274,7 +274,8 @@ while($fila = mysql_fetch_array($resultado, MYSQL_ASSOC)){
 	if($m == 13){//Luego de la manzana 13 imprime plazas y espacio cedido para equipamiento Urbano
 		echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
 		echo "<div id='plaza'><h1>Plaza</h1></div>";
-		echo "<div id='placita'><h2>Placita</h2></div>";
+		//echo "<div id='placita'><h2>Placita</h2></div>";
+		echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
 	}
 	if($m == 14){//Separa los lotes verticales de los apaisados
 		echo "<div style='clear:both'> </div>";
