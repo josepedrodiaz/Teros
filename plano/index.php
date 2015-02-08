@@ -67,7 +67,7 @@
 	#plaza{
 		float: left;
 		height: 97px;
-		width: 230px;
+		width: 225px;
 		margin: 5px;
 		position: relative;
 		top: 15px;
@@ -82,11 +82,13 @@
 	}
 	 #placita{
 		margin-right: 10px;
+		background-color: #63B213;
 	}
 	#equipamiento-comunitario{
 		background-color: #EAEAEA;
+		margin-right: 5px;
 	}
-	#plaza, #placita{
+	#plaza{
 		background-color: #94D636;
 	}
 	div{
@@ -136,28 +138,101 @@
 		position: relative;
 		top: 10px;
 	}
-	#calle47{
+	#calle47, #calle48, #calle49, #calle49bis, #calle50, #calle52, 
+	#calle173, #calle173bis, #calle174, #calle174_2, #calle174bis, #calle175, #calle175_2, #calle175bis, #calle176, #calle176_2, #calle176bis,#calle177{
+
 		position: absolute;	
+	} 
+	#calle47{
 		left: 495px;
 		top: -20px;
 	}
+	#calle48{
+		left: 400px;
+		top: 110px;
+	}
+	#calle49{
+		left: 400px;
+		top: 223px;
+	}
+	#calle49bis{
+		left: 400px;
+		top: 337px;
+	}
+	#calle50{
+		left: 400px;
+		top: 453px;
+	}
+
+	#calle51{
+		left: 400px;
+		top: 380px;
+	}
 	#calle52{
-		position: absolute;	
 		left: 355px;
 		top: 705px;
 	}
+	#calle173bis{	
+		top: 580px;
+		left: 893px;
+		white-space: nowrap;
+	}
+	#calle174{	
+		top: 221px;
+		left: 770px;
+		white-space: nowrap;
+	}
+	#calle174_2{	
+		top: 580px;
+		left: 775px;
+		white-space: nowrap;
+	}
+	#calle174bis{	
+		top: 580px;
+		left: 638px;
+		white-space: nowrap;
+	}
+	#calle175{	
+		top: 221px;
+		left: 520px;
+		white-space: nowrap;
+	}
+	#calle175_2{	
+		top: 580px;
+		left: 523px;
+		white-space: nowrap;
+	}
+	#calle175bis{	
+		top: 580px;
+		left: 388px;
+		white-space: nowrap;
+	}
+	#calle176{	
+		top: 221px;
+		left: 269px;
+		white-space: nowrap;	
+	}
+	#calle176_2{
+		top: 580px;
+		left: 269px;
+		white-space: nowrap;	
+	}
+	#calle176bis{	
+		top: 580px;
+	left: 137px;
+	white-space: nowrap;
+	}
 	#calle177{
-		position: absolute;	
 		top: 400px;
 		left: -40px;
 	}
 	#calle173{
-		position: absolute;	
 		top: 400px;
 		left: 1015px;
 		white-space: nowrap;
 	}
-	#calle173,#calle177{
+
+	#calle173, #calle173bis, #calle174, #calle174_2, #calle174bis, #calle175, #calle175_2, #calle175bis, #calle176, #calle176_2, #calle176bis,#calle177{
 	-webkit-transform: rotate(-90deg);
   		-moz-transform: rotate(-90deg);
   		-ms-transform: rotate(-90deg);
@@ -170,6 +245,11 @@
   		transform-origin: 50% 50%;
   		filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   		}
+
+  	#calle173bis, #calle174, #calle174_2, #calle174bis, #calle175, #calle175_2, #calle175bis, #calle176, #calle176_2, #calle176bis, #calle48, #calle49, #calle49bis, #calle50 {
+		background-color: chartreuse;
+  	}
+
   	#plaza h1,
   	#placita h2{
   		font-size: 14px;
@@ -181,10 +261,31 @@
 </head>
 
 <body>
+<!-- Calles circundantes -->
 <h1 id="calle47">Calle 47</h1>
 <h1 id="calle52">Ampliación Av. 52 (a ceder)</h1>
 <h1 id="calle177">Calle 177</h1>
 <h1 id="calle173">Av. 173</h1>
+
+<!-- Calles internas horizontales -->
+<h5 id="calle48">Calle 48</h5>
+<h5 id="calle49">Calle 49</h5>
+<h5 id="calle49bis">Calle 49 bis</h5>
+<h5 id="calle50">Calle 50</h5>
+
+<!-- Calles internas horizontales -->
+<h5 id="calle176bis">Calle 176 bis</h5>
+<h5 id="calle176">Calle 176</h5>
+<h5 id="calle176_2">Calle 176</h5>
+<h5 id="calle175bis">Calle 175 bis</h5>
+<h5 id="calle175">Calle 175</h5>
+<h5 id="calle175_2">Calle 175</h5>
+<h5 id="calle174bis">Calle 174 bis</h5>
+<h5 id="calle174">Calle 174</h5>
+<h5 id="calle174_2">Calle 174</h5>
+<h5 id="calle173bis">Calle 173 bis</h5>
+
+
 <div id="page">
 <?php
 require_once('../db/db.php');
@@ -274,8 +375,8 @@ while($fila = mysql_fetch_array($resultado, MYSQL_ASSOC)){
 	if($m == 13){//Luego de la manzana 13 imprime plazas y espacio cedido para equipamiento Urbano
 		echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
 		echo "<div id='plaza'><h1>Plaza</h1></div>";
-		//echo "<div id='placita'><h2>Placita</h2></div>";
-		echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
+		echo "<div id='placita'><p>Espacio reservado para equipamiento comunitario</p></div>";
+		//echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
 	}
 	if($m == 14){//Separa los lotes verticales de los apaisados
 		echo "<div style='clear:both'> </div>";

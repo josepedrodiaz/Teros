@@ -108,11 +108,6 @@ if($lote == "A"){
 					  } else {
 					//ESTO HAGO SI PUSO BIEN EL CAPTCHA
 
-					  ?> 
-
-
-
-					<?php
 					$dni = $_POST["DNI"];	
 						
 						// load Zend Gdata libraries
@@ -235,8 +230,7 @@ if($lote == "A"){
 							   echo "<br /><b>Nombre conyugue:</b> " . mb_strtoupper($nombre_conyugue . " " . $apellido_conyugue, 'UTF-8');
 							   echo "<br /><b>DNI conyugue:</b> " . $dni_conyugue;		 
 							   
-							   
-							   ?> 	  
+						?> 	  
 							   
 							   <hr />
 						  <div style="width:100%">
@@ -257,7 +251,7 @@ if($lote == "A"){
 						  <p align="center"><a href="index.php">Volver</a></p>						  
 						  
 						 
-						<?
+						<?php
 						}//FINAL DE DESPLIEGUE DE DATOS SI HAY DOCUMENTO ASOCIADO	  
 						  
 					  }//FINAL DE SUCESO RECAPTCHA
