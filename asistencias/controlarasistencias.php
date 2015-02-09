@@ -1,7 +1,7 @@
 <?php require_once('../db/db.php'); ?>
 <?php
 $error=0;
-$id_evento_pred=6;
+$id_evento_pred=7;
 
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -48,7 +48,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 		$error=1;
 	} 
 	//controlar que el beneficiario no haya confirmado asistencia anteriormente al evento
-	$consultar_2="SELECT * FROM asistencia WHERE dni=".$_POST['dni'];
+	$consultar_2="SELECT * FROM asistencia WHERE dni= " . $_POST['dni']  . " AND id_evento = " . $id_evento_pred;
 	$respuesta_consultar_2=mysql_query($consultar_2) or die (mysql_error());
 	if (mysql_num_rows($respuesta_consultar_2)>0) {
 		$error=2;
