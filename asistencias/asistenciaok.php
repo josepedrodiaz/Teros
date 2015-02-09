@@ -72,9 +72,13 @@ $totalRows_mostrar = mysql_num_rows($mostrar);
       <p class="letra2"><?php echo $row_mostrar['apellidos']; ?>, <?php echo $row_mostrar['nombres']; ?></p>
       <p><span class="letra1">Gracias</span></p>
       <p>&nbsp;</p>
-      <p><a href="controlarasistencias.php">CARGAR OTRA ASISTENCIA</a><br>
+      <p><a href="controlarasistencias.php" id="otro">CARGAR OTRA ASISTENCIA</a><br>
         <br>
-    </p></td>
+    </p>
+<script type="text/javascript">
+      document.getElementById("otro").focus();
+      </script>
+    </td>
   </tr>
 </table>
 </body>
