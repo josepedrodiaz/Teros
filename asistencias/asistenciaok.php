@@ -73,6 +73,9 @@ $totalRows_mostrar = mysql_num_rows($mostrar);
       <p><span class="letra1">Gracias</span></p>
       <p>&nbsp;</p>
       <p><a href="controlarasistencias.php" id="otro">CARGAR OTRA ASISTENCIA</a><br>
+       <script type="text/javascript">
+	      document.getElementById("otro").focus();
+	   </script>
         <br>
     </p>
 <script type="text/javascript">

@@ -143,8 +143,8 @@ function validar(form1) {
         <td height="93" align="center"><a href="controlarasistencias.php" class="letra2" id="otro"><span class="letra1">
         <span class="letra5">Intentar nuevamente</span></span></a>
         <script type="text/javascript">
-      document.getElementById("otro").focus();
-      </script>
+      		document.getElementById("otro").focus();
+        </script>
         </td>
   </tr>
 </table>
@@ -164,9 +164,9 @@ function validar(form1) {
   </tr>
    <tr>
         <td height="93" align="center"><a href="controlarasistencias.php" class="letra2" id="otro"><span class="letra1"><span class="letra5">Intentar nuevamente</span></span></a>
-<script type="text/javascript">
-      document.getElementById("otro").focus();
-      </script>
+		<script type="text/javascript">
+    	  document.getElementById("otro").focus();
+        </script>
         </td>
   </tr>
 </table>
