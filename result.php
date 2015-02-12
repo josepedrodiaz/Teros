@@ -137,7 +137,7 @@ if($lote == "A"){
 						  
 						  
 						} catch (Exception $e) {
-							//die('ERROR: ' . $e->getMessage());		
+							die('ERROR: ' . $e->getMessage());		
 						} 
 						
 						if(count($listFeed)==0 && $dni!== ""){
