@@ -116,8 +116,8 @@ if($lote == "A"){
 						Zend_Loader::loadClass('Zend_Gdata_ClientLogin');
 
 						// set credentials for ClientLogin authentication
-						$user = "josepedrodiaz@gmail.com";
-						$pass = "Pedro2000";
+						$user = "gmailuser@gmail.com";
+						$pass = "xxxxx";
 
 						try {  
 						  // connect to API
