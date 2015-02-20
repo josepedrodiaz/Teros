@@ -21,6 +21,8 @@ $query = "SELECT b.nombres AS nombres, b.apellidos AS apellidos, b.dni AS dni
           AND a.dni = b.dni
           ORDER BY b.apellidos ASC";
 $result = mysql_query($query) or die(mysql_error());
+
+$total = mysql_num_rows($result);
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,6 +32,7 @@ $result = mysql_query($query) or die(mysql_error());
 
 <body>
 <h1>EVENTO: <?=$nombre_evento?> (<?=$fecha_evento?>)</h1>
+<h2>Total de asistentes a este evento: <?= $total ?></h2>
 <table>
 <?php
 while($row = mysql_fetch_array($result)){ #recorre el arreglo de resultados y arma la tabla
