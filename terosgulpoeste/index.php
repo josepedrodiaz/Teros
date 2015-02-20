@@ -18,7 +18,7 @@
     <td height="45" align="center"><img src="logo.jpg" width="319" height="191" /></td>
   </tr>
   <tr>
-    <td height="45" align="center"><a href="agregarbeneficiario.php">Agregar beneficiario </a></td>
+    <td height="45" align="center"><!-- <a href="agregarbeneficiario.php">Agregar beneficiario </a> --></td>
   </tr>
   <tr>
     <td width="486" height="38" align="center"><a href="listadobeneficiarios.php">Ver listado de beneficiarios</a></td>
