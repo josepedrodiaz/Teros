@@ -1,4 +1,7 @@
-<header>
+<!DOCTYPE html>
+<html>
+<head>
+<title>ADMIN</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <style type="text/css">
 .estilo1 {
@@ -7,7 +10,7 @@
 	font-weight: bold;
 }
 </style>
-</header>
+</head>
 
 <body>
 <table width="500" border="0" align="center">
@@ -28,6 +31,9 @@
   </tr>
   <tr>
     <td height="38" align="center">Controlar asistencias</td>
+  </tr>
+  <tr>
+    <td height="38" align="center">Ver listado de asistentes a eventos: <?php include("selectEventos.php"); /*genero el select de Eventos*/ ?> </td>
   </tr>
 </table>
 </body>
