@@ -33,7 +33,7 @@ $total = mysql_num_rows($result);
 <body>
 <h1>EVENTO: <?=$nombre_evento?> (<?=$fecha_evento?>)</h1>
 <h2>Total de asistentes a este evento: <?= $total ?></h2>
-<p><a href="index.php">Atrás</a></p>
+<p><a href="index.php">Atr&aacute;s</a></p>
 <table>
 <?php
 while($row = mysql_fetch_array($result)){ #recorre el arreglo de resultados y arma la tabla
@@ -45,7 +45,7 @@ while($row = mysql_fetch_array($result)){ #recorre el arreglo de resultados y ar
 ?>
 </table>
 
-<p><a href="index.php">Atrás</a></p>
+<p><a href="index.php">Atr&aacute;s</a></p>
 
 </body>
 </html>
