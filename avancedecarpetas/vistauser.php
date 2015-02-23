@@ -2,9 +2,30 @@
 
 //si todos los items estan completos usar la clase panel-collapse collapse sino usar panel-collapse collapse in
 
-//Niveles de progreso
+//Niveles de progreso va del 0 al 100
 
-$niveldeprogreso = 39;
+$niveldeprogreso = 81;
+
+//Grupos de opciones false abierto, true cerrado
+
+$grupo1 = false;
+$grupo2 = false;
+$grupo3 = false;
+
+if($grupo1 == false)
+    $grupo1_resultado = 'panel-collapse collapse in';
+    else
+        $grupo1_resultado = 'panel-collapse collapse';
+
+if($grupo2 == false)
+    $grupo2_resultado = 'panel-collapse collapse in';
+    else
+        $grupo2_resultado = 'panel-collapse collapse';
+
+if($grupo3 == false) 
+    $grupo3_resultado = 'panel-collapse collapse in';
+    else
+        $grupo3_resultado = 'panel-collapse collapse';
 
 ?>
 
@@ -79,7 +100,7 @@ $niveldeprogreso = 39;
                 </a>
               </h4>
             </div>
-            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div id="collapseOne" class="<?php echo $grupo1_resultado;?>" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <div class="checkbox">
                       <label>
@@ -110,7 +131,7 @@ $niveldeprogreso = 39;
                 </a>
               </h4>
             </div>
-            <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+            <div id="collapseTwo" class="<?php echo $grupo2_resultado;?>" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
                     <div class="checkbox">
                       <label>
@@ -141,7 +162,7 @@ $niveldeprogreso = 39;
                 </a>
               </h4>
             </div>
-            <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+            <div id="collapseThree" class="<?php echo $grupo3_resultado;?>" role="tabpanel" aria-labelledby="headingThree">
                 <div class="panel-body">
                     <div class="checkbox">
                       <label>
@@ -165,6 +186,9 @@ $niveldeprogreso = 39;
           </div>
         </div>
     </div>
+    <footer>
+        <class class="text-center"><a href="#"><h3>Ver avance general</h3></a></class>
+    </footer>
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
