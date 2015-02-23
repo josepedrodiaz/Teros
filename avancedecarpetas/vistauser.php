@@ -56,7 +56,7 @@ if($grupo3 == false)
             </div>
             <div class="progress col-md-5 col-xl-5">
                 <?php
-                //Niveles de avance del 0 al 33%
+                //Niveles de avance del 0 al 49%
                 if($niveldeprogreso >= 0 && $niveldeprogreso <= 49) { 
                     ?>
                     <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="<?php echo $niveldeprogreso;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $niveldeprogreso;?>%">
@@ -66,7 +66,7 @@ if($grupo3 == false)
                 <?php 
                 }
 
-                //Niveles de avance del 34 al 67%
+                //Niveles de avance del 50 al 79%
                 if($niveldeprogreso >= 50 && $niveldeprogreso <= 79) { 
                     ?>
                     <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="<?php echo $niveldeprogreso;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $niveldeprogreso;?>%">
@@ -76,7 +76,7 @@ if($grupo3 == false)
                 <?php 
                 }
 
-                //Niveles de avance del 70 al 100%
+                //Niveles de avance del 80 al 100%
                 if($niveldeprogreso >= 80 && $niveldeprogreso <= 100) { 
                     ?>
                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<?php echo $niveldeprogreso;?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $niveldeprogreso;?>%">
