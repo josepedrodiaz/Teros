@@ -1,5 +1,24 @@
 <?php
  header('Content-Type: text/html; charset=utf-8');
+
+//JOOMLA DEFINITIONS
+define( '_JEXEC', 1 );
+define( 'DS', DIRECTORY_SEPARATOR );
+define( 'JPATH_BASE', $_SERVER[ 'DOCUMENT_ROOT' ] );
+
+//JOOMLA LIBRARIES
+require_once( JPATH_BASE . DS . 'includes' . DS . 'defines.php' ); 
+require_once( JPATH_BASE . DS . 'includes' . DS . 'framework.php' ); 
+
+//INIT APP
+$mainframe = JFactory::getApplication('site');
+$mainframe->initialise();
+$user = JFactory::getUser();
+
+if($user->name == ""){
+	die("No es un usuario registrado");
+}
+
  ?>
 <html lang="en">
 <head>
@@ -147,7 +166,7 @@
 	} 
 	#calle47{
 		left: 495px;
-		top: -40px;
+		top: -33px;
 	}
 	#calle48{
 		left: 400px;
