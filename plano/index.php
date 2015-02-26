@@ -147,7 +147,7 @@
 	} 
 	#calle47{
 		left: 495px;
-		top: -20px;
+		top: -40px;
 	}
 	#calle48{
 		left: 400px;
