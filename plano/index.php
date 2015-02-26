@@ -24,6 +24,8 @@
 	body{
 		font-family: 'Helvetica', 'Arial', sans-serif;
 		color: #000;
+		position: relative;
+		top: 15px;
 	}
 	#page{
 		width: 1200px;
