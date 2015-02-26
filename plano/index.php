@@ -24,6 +24,8 @@
 	body{
 		font-family: 'Helvetica', 'Arial', sans-serif;
 		color: #000;
+		position: relative;
+		top: 15px;
 	}
 	#page{
 		width: 1200px;
@@ -149,19 +151,19 @@
 	}
 	#calle48{
 		left: 400px;
-		top: 110px;
+		top: 92px;
 	}
 	#calle49{
 		left: 400px;
-		top: 223px;
+		top: 205px;
 	}
 	#calle49bis{
 		left: 400px;
-		top: 337px;
+		top: 320px;
 	}
 	#calle50{
 		left: 400px;
-		top: 453px;
+		top: 435px;
 	}
 
 	#calle51{
@@ -174,52 +176,52 @@
 	}
 	#calle173bis{	
 		top: 580px;
-		left: 893px;
+		left: 888px;
 		white-space: nowrap;
 	}
 	#calle174{	
 		top: 221px;
-		left: 770px;
+		left: 765px;
 		white-space: nowrap;
 	}
 	#calle174_2{	
 		top: 580px;
-		left: 775px;
+		left: 770px;
 		white-space: nowrap;
 	}
 	#calle174bis{	
 		top: 580px;
-		left: 638px;
+		left: 633px;
 		white-space: nowrap;
 	}
 	#calle175{	
 		top: 221px;
-		left: 520px;
+		left: 515px;
 		white-space: nowrap;
 	}
 	#calle175_2{	
 		top: 580px;
-		left: 523px;
+		left: 518px;
 		white-space: nowrap;
 	}
 	#calle175bis{	
 		top: 580px;
-		left: 388px;
+		left: 383px;
 		white-space: nowrap;
 	}
 	#calle176{	
 		top: 221px;
-		left: 269px;
+		left: 264px;
 		white-space: nowrap;	
 	}
 	#calle176_2{
 		top: 580px;
-		left: 269px;
+		left: 264px;
 		white-space: nowrap;	
 	}
 	#calle176bis{	
 		top: 580px;
-	left: 137px;
+	left: 128px;
 	white-space: nowrap;
 	}
 	#calle177{
