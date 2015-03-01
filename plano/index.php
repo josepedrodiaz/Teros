@@ -166,80 +166,80 @@ if($user->name == ""){
 	} 
 	#calle47{
 		left: 495px;
-		top: -33px;
+		top: 100px;
 	}
 	#calle48{
 		left: 400px;
-		top: 92px;
+		top: 234px;
 	}
 	#calle49{
 		left: 400px;
-		top: 205px;
+		top: 347px;
 	}
 	#calle49bis{
 		left: 400px;
-		top: 320px;
+		top: 462px;
 	}
 	#calle50{
 		left: 400px;
-		top: 435px;
+		top: 577px;
 	}
 
 	#calle51{
 		left: 400px;
-		top: 380px;
+		top: 522px;
 	}
 	#calle52{
 		left: 355px;
-		top: 705px;
+		top: 847px;
 	}
 	#calle173bis{	
-		top: 580px;
+		top: 675px;
 		left: 888px;
 		white-space: nowrap;
 	}
 	#calle174{	
-		top: 221px;
-		left: 765px;
+		top: 350px;
+		left: 762px;
 		white-space: nowrap;
 	}
 	#calle174_2{	
-		top: 580px;
+		top: 675px;
 		left: 770px;
 		white-space: nowrap;
 	}
 	#calle174bis{	
-		top: 580px;
+		top: 675px;
 		left: 633px;
 		white-space: nowrap;
 	}
 	#calle175{	
-		top: 221px;
-		left: 515px;
+		top: 350px;
+		left: 512px;
 		white-space: nowrap;
 	}
 	#calle175_2{	
-		top: 580px;
+		top: 675px;
 		left: 518px;
 		white-space: nowrap;
 	}
 	#calle175bis{	
-		top: 580px;
+		top: 675px;
 		left: 383px;
 		white-space: nowrap;
 	}
 	#calle176{	
-		top: 221px;
-		left: 264px;
+		top: 350px;
+		left: 261px;
 		white-space: nowrap;	
 	}
 	#calle176_2{
-		top: 580px;
+		top: 675px;
 		left: 264px;
 		white-space: nowrap;	
 	}
 	#calle176bis{	
-		top: 580px;
+		top: 675px;
 	left: 128px;
 	white-space: nowrap;
 	}
