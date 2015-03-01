@@ -277,11 +277,21 @@ if($user->name == ""){
   		position: relative;
   		top: 41px;
   	}
+
+  	#norte{
+  		position: relative;
+  		top: 30px;
+  		float: right;
+  	}
 </style>
 <!-- <meta http-equiv="refresh" content="3"> -->
 </head>
 
 <body>
+<!-- Señala el Norte -->
+<img src="http://gigantedeloeste.org/teros/img/Norte.jpg" id="norte" />
+
+
 <!-- Calles circundantes -->
 <h1 id="calle47">Calle 47</h1>
 <h1 id="calle52">Ampliación Av. 52 (a ceder)</h1>
