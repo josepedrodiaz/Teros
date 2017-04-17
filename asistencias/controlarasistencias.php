@@ -1,7 +1,7 @@
 <?php require_once('../db/db.php'); ?>
 <?php
 $error=0;
-$id_evento_pred=9;
+$id_evento_pred=12;
 
 if (!function_exists("GetSQLValueString")) {
 function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 

@@ -1,10 +1,12 @@
 <?php
- header('Content-Type: text/html; charset=utf-8');
+/*CODE TO VALIDATE JOOMLA USER
+header('Content-Type: text/html; charset=utf-8');
 
 //JOOMLA DEFINITIONS
 define( '_JEXEC', 1 );
 define( 'DS', DIRECTORY_SEPARATOR );
 define( 'JPATH_BASE', $_SERVER[ 'DOCUMENT_ROOT' ] );
+
 
 //JOOMLA LIBRARIES
 require_once( JPATH_BASE . DS . 'includes' . DS . 'defines.php' ); 
@@ -18,7 +20,7 @@ $user = JFactory::getUser();
 if($user->name == ""){
 	die("No es un usuario registrado");
 }
-
+ */
  ?>
 <html lang="en">
 <head>
@@ -36,6 +38,10 @@ if($user->name == ""){
 	$( "#plaza" ).click(function() {
          location.reload();
 	});
+	function recarga(){
+		$( "#page" ).load( "plano.php" );
+	}
+	//setInterval(recarga, 2000);
   });
   </script>
 
@@ -100,13 +106,12 @@ if($user->name == ""){
 		width: 125px;
 		position: relative;
 		top: 19px;
+		background-color: #EAEAEA;
 	}
 	 #placita{
 		margin-right: 10px;
-		background-color: #63B213;
 	}
 	#equipamiento-comunitario{
-		background-color: #EAEAEA;
 		margin-right: 5px;
 	}
 	#plaza{
@@ -284,13 +289,12 @@ if($user->name == ""){
   		float: right;
   	}
 </style>
-<!-- <meta http-equiv="refresh" content="3"> -->
 </head>
 
 <body>
-<!-- Señala el Norte -->
-<img src="http://gigantedeloeste.org/teros/img/Norte.jpg" id="norte" />
-
+<!-- Señala el Norte 
+<img src="http://gigantedeloeste.org/teros/img/Norte1.jpg" id="norte" />
+ -->
 
 <!-- Calles circundantes -->
 <h1 id="calle47">Calle 47</h1>
@@ -319,104 +323,11 @@ if($user->name == ""){
 
 <div id="page">
 <?php
-require_once('../db/db.php');
-
-mysql_query("SET NAMES 'utf8'",$db);
-
-for($m=1;$m<23;$m++){
-
-$query = "SELECT * from lotes
-			WHERE manzana = $m";
-
-$resultado = mysql_query($query,$db) or die(mysql_error());
-
-switch ($m) {
-	case 1:
-	case 2:
-	case 3:
-	case 4:
-	case 5:
-	case 6:
-	case 7:
-	case 8:
-	case 9:
-	case 10:
-	case 11:
-	case 12:
-	case 13:
-	case 14:
-		$lotesPorManzana = "20";
-		break;
-	case 15:
-	case 16:
-	case 17:
-	case 18:
-	case 19:
-	case 20:
-	case 21:
-	case 22:
-		$lotesPorManzana = "19";
-		break;
-	default:
-		# code...
-		break;
-}
-
-
-echo "<div class='manzana-$lotesPorManzana'>";
-
-echo "<p class='titulo-manzana'>Manzana $m</p>";
-
-while($fila = mysql_fetch_array($resultado, MYSQL_ASSOC)){
-	$l = $fila["lote"];
-	$d = $fila["dni-beneficiario"];
-	if($fila["dni-beneficiario"] > 0){
-		$sql = "SELECT beneficiarios.nombres AS nombres,
-				  beneficiarios.apellidos AS apellidos
-				  FROM beneficiarios
-				  WHERE dni = " . $fila["dni-beneficiario"] . " LIMIT 1";
-		$query = mysql_query($sql, $db) or die(mysql_error());
-		while($result = mysql_fetch_array($query, MYSQL_ASSOC)){
-				$n = $result["nombres"] . " " . $result["apellidos"];
-			}
-	}
-		if($fila["dni-beneficiario"]=="0"){//si el campo DNI beneficiario tiene un valor diff a 0
-			$class = "disponible";
-			$title = ""; 
-		}else{
-			$class = "ocupado";
-			$title = $n . " DNI " . $d;
-		}
-
-		if($lotesPorManzana == "20" ){
-			$tipoDeLote = "lote-vertical";
-		}
-		if($lotesPorManzana == "19" && ($l==17 || $l==18 || $l==19 || $l==1) ){
-			$tipoDeLote = "lote-vertical";
-		}
-		if($lotesPorManzana == "19" && ($l==2 || $l==3 || $l==4 || $l==5 || $l==6 || $l==7 || $l==11 || $l==12|| $l==13 || $l==14 || $l==15 || $l==16) ){
-			$tipoDeLote = "lote-horizontal";
-		}
-		if($lotesPorManzana == "19" && ($l==8 || $l==9 || $l==10) ){
-			$tipoDeLote = "lote-cuadrado";
-		}
-		echo "<div id='l".$l."' class='".$class." $tipoDeLote' title='".$title."' ><span class='numero-de-lote'>".$l."</span></div>";
-	}
-	echo "</div>";
-	if($m == 13){//Luego de la manzana 13 imprime plazas y espacio cedido para equipamiento Urbano
-		echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
-		echo "<div id='plaza'><h1>Plaza</h1></div>";
-		echo "<div id='placita'><p>Espacio reservado para equipamiento comunitario</p></div>";
-		//echo "<div id='equipamiento-comunitario'><p>Espacio reservado para equipamiento comunitario</p></div>";
-	}
-	if($m == 14){//Separa los lotes verticales de los apaisados
-		echo "<div style='clear:both'> </div>";
-	}
-}
-
-mysql_free_result($resultado);
-mysql_close($db);
+include("plano.php");
 ?>
 </div>
+
+<p style="margin-top:150px">Este plano se ve mejor con navegadores que usen la plataforma WebKit (<a href="http://www.google.com.ar/chrome/" target="_blank">Google Chrome</a>, <a target="_blank" href="https://www.apple.com/es/safari/">Safari</a>, <a target="_blank" href="http://www.opera.com/es-419">Opera</a>, entre otros)</p>
+
 </body>
 </html>

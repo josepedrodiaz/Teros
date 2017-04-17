@@ -30,7 +30,7 @@
     <td height="38" align="center"><a href="listadoeventos.php">Ver listado de eventos/asambleas</a></td>
   </tr>
   <tr>
-    <td height="38" align="center">Controlar asistencias</td>
+    <td height="38" align="center"><a href="elegirlotes.php">Elegir lotes</a></td>
   </tr>
   <tr>
     <td height="38" align="center">Ver listado de asistentes a eventos: <?php include("selectEventos.php"); /*genero el select de Eventos*/ ?> </td>

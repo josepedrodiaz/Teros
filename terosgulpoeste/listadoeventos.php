@@ -1,5 +1,6 @@
 <?php require_once('../db/db.php'); ?>
 <?php
+date_default_timezone_set('America/Buenos_Aires'); 
 $contador1=0;
 
 if (!function_exists("GetSQLValueString")) {
